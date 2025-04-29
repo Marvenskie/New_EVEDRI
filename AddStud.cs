@@ -257,6 +257,23 @@ namespace New_EVEDRI
             {
                 Password = txtPword.Text;
             }
+            if (cmbCourse.SelectedIndex == 0)
+            {
+                course += cmbCourse.Text;
+            }
+            if (cmbCourse.SelectedIndex == 1) 
+            {
+                course += cmbCourse.Text;
+            }
+            if (cmbCourse.SelectedIndex == 2)
+            {
+                course += cmbCourse.Text;
+            }
+            if (cmbCourse.SelectedIndex == 3)
+            {
+                course += cmbCourse.Text;
+            }
+
 
             Student[i] = data + gender + hobbies + favorite + saying;
             MessageBox.Show("You successfully stored your information", "Successfully", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
@@ -270,6 +287,7 @@ namespace New_EVEDRI
             sheet.Range[row, 5].Value = saying;
             sheet.Range[row, 6].Value = txtUname.Text;
             sheet.Range[row, 7].Value = txtPword.Text;
+            sheet.Range[row, 8].Value = course;
             sheet.Range[row, 9].Value = "Active";
             book.SaveToFile(@"C:\Users\ACT-STUDENT\Desktop\New_Excel (1).xlsx", ExcelVersion.Version2016);
 
@@ -283,6 +301,7 @@ namespace New_EVEDRI
             chkBasketball.Checked = false;
             chkVolleyball.Checked = false;
             cmbColor.SelectedIndex = -1;
+            cmbCourse.SelectedIndex = -1;
             txtSaying.Clear();
             txtUname.Clear();
             txtPword.Clear();
